@@ -31,6 +31,20 @@ Produce : Utilisé pour produire des streams , retourne une instance de ReceiveC
 Runblocking : elle bloc le thread jusqu'à la fin de l'éxécution , utilisé pour les test unitaires ,
 elle retourne un result de type T
  */
+
+/*
+Fonctions Suspendu
+
+    WithContext: permet de changer le contexte d'exécution d'une coroutine en spécifiant un contexte différent.
+    WithTimeout: permet de définir une durée limite pour l'exécution d'une coroutine. Si la durée limite est dépassée, une exception est lancée.
+    WithTimeoutOrNull: similaire à WithTimeout, mais ne lance pas d'exception en cas de dépassement de la durée limite. Au lieu de cela, il retourne null.
+    join: permet de bloquer l'exécution du programme jusqu'à ce que la coroutine soit terminée.
+    delay: suspend l'exécution de la coroutine pendant une durée spécifiée sans bloquer le fil d'exécution.
+    await: permet d'attendre la fin d'une tâche asynchrone et récupérer son résultat.
+    supervisorScope: permet de lancer une nouvelle hiérarchie de coroutines indépendante de la hiérarchie parente.
+    coroutineScope: permet de lancer une nouvelle portée de coroutines imbriquée à la portée parente,
+    tout en attendant que toutes les coroutines lancées à l'intérieur de cette portée soient terminées avant de continuer l'exécution de la coroutine parente.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
